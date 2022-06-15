@@ -20,7 +20,7 @@
         </div>
     </header>
     <div class="form-content">
-      <form class="form" action="#" onsubmit="save();">
+      <form class="form" action="#" onsubmit="save();" onreset="resetForm()">
         <div class="form-head">  Employee Payroll form </div>
           <div class="row-content">
             <label class="label text" for="name">Name</label>
@@ -90,6 +90,7 @@
                     <label class="label text" for="startDate">Start Date :</label>
                       <div class="lable text">
                         <select id="day" name="Day">
+                            <option value="" disabled selected hidden>Day</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -123,6 +124,7 @@
                             <option value="31">31</option>
                         </select> 
                         <select id="month" name="Month">
+                            <option value="" disabled selected hidden>Month</option>
                             <option value="Jan">January</option>
                             <option value="Feb">Febuary</option>
                             <option value="March">March</option> 
@@ -136,7 +138,9 @@
                             <option value="Nov">November</option>
                             <option value="Dec">December</option>
                          </select>
-                          <select id="year" name="Year">
+                            
+                            <select id="year" name="Year">
+                            <option value="" disabled selected hidden>Year</option>
                             <option value="2016">2016</option> 
                             <option value="2017">2017</option>
                             <option value="2018">2018</option>
