@@ -62,6 +62,12 @@ checkStartDate=(date)=>{
     let startDate=new Date(date)
     if(startDate> curruntDate)
         throw "Start Date iS future Date";
+    
+    
+    // alert("C"+curruntDate.getTime());
+    // alert("s"+startDate.getTime());
+    // alert("C-S"+(curruntDate.getTime() - startDate.getTime()));
+
     const diff = Math.abs(curruntDate.getTime() - startDate.getTime());
     if(diff/(1000*60*60*24)>30)
         throw "Start Date is beyond 30 Days";
