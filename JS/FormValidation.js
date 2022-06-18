@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     validateDate();
     validatename();
     salaryrange();
-    
+
 });
 function salaryrange(){
     const salary = document.querySelector('#salary');
@@ -62,8 +62,7 @@ checkStartDate=(date)=>{
     let startDate=new Date(date)
     if(startDate> curruntDate)
         throw "Start Date iS future Date";
-    
-    
+      
     // alert("C"+curruntDate.getTime());
     // alert("s"+startDate.getTime());
     // alert("C-S"+(curruntDate.getTime() - startDate.getTime()));
@@ -81,6 +80,12 @@ function createAndUpdateStorage(employeePayrollData) {
     } else {
         employeePayrollList = [employeePayrollData]
     }
-     alert(employeePayrollList.toString());
+    alert(employeePayrollList.toString());
     localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList))
 }
+
+const setElementValue = (id, value) => {
+    const element = document.querySelector(id);
+    element.value = value;
+}
+

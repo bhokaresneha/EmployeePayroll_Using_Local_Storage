@@ -1,4 +1,11 @@
 class EmployeePayroll {
+
+    get id(){
+        return this._id;
+    }
+    set id(id){
+        this._profilePic =id;
+    }
     get name() {
         return this._name;
     }
@@ -48,7 +55,7 @@ class EmployeePayroll {
     }
 
     toString() {
-        return "name=" + this.name + ", gender=" + this.gender +
+        return "id=" + this.id+"name=" + this.name + ", gender=" + this.gender +
             ", profilePic=" + this.profilePic + ", department=" + this.department +
             ",salary=" + this.salary + ", startDate=" +this.startDate + ", note=" + this.note;
     }
