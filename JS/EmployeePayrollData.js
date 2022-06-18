@@ -52,7 +52,7 @@ function createAndUpdateStorage(employeePayrollData) {
         employeePayrollList = [employeePayrollData]
     }
     alert("Sucessfully Data Stored into Local Storage");
-    // alert(employeePayrollList.toString());
+    alert(employeePayrollList.toString());
     localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList))
 }
 //UC-5
