@@ -10,7 +10,7 @@ class EmployeePayroll {
         return this._name;
     }
     set name(name) {
-        let nameRgx = RegExp('^[A-Z]{1}[a-z]{2,}$');
+        let nameRgx = RegExp('^[A-Z]{1}[a-z]{2,}\\s?[A-Za-z]*$');
         if (nameRgx.test(name))
             this._name = name;
         else throw 'Name is Incorrect!';

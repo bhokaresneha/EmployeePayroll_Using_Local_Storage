@@ -101,12 +101,16 @@ const createAndUpdateStorage = () => {
         if (!empPayrollData) {
             employeePayrollList.push(createEmployeePayrollData());
             alert("Added Successfully");
+           // window.location.replace(site_properties.home_page);
+
         } else {
             const index = employeePayrollList
                 .map(empData => empData._id)
                 .indexOf(empPayrollData._id);
             employeePayrollList.splice(index, 1, createEmployeePayrollData(empPayrollData._id));
             alert("Updated Successfully");
+           // window.location.replace(site_properties.home_page);
+
         }
     } else {
         employeePayrollList = [createEmployeePayrollData()]
@@ -186,7 +190,8 @@ const resetForm = () => {
     setValue('#year', '');
 }
 const unsetSelectedValues = (propertyValue) => {
-    let allItems = document.querySelectorAll(propertyValue); allItems.forEach(item => {
+    let allItems = document.querySelectorAll(propertyValue); 
+    allItems.forEach(item => {
         item.checked = false;
     });
 }
